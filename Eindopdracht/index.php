@@ -8,7 +8,8 @@
  * Verder hoef je geen code te schrijven op deze pagina.
  */
 
-
+include 'bitcoinData.php';
+include 'allcoins.php';
 
 /*******************************************************************************************************************/
 /**************************** De code hieronder heb je nodig en hoef je niet aan te passen *************************/

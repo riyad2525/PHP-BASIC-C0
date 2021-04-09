@@ -17,7 +17,10 @@
 
 /* 
  * Opdracht 2: Zet hier de $buttons array neer 
+ * 
  */
+$buttons=[];
+echo $buttons;
 
 
 /******************************************* OPDRACHT 2 doe je hierboven *******************************************/
