@@ -38,7 +38,10 @@ That's it! De functie roep je aan op dezelfde wijze als stap 2 en stap 3 bij elk
 
 Nu gaat de functie doen waarvoor ie in het leven is geroepen. En we kunnen de functie vaker aanroepen als we dat willen. Dat maakt het zo handig. En nu mag je zelf een functie schrijven.
 
-## Leerdoelen
+## 
+
+
+eerdoelen
 
 1. [ ] Ik weet wat functies zijn
 2. [ ] Ik volg de juiste regels bij het schrijven van functies

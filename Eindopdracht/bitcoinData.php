@@ -1,12 +1,6 @@
 
 <?php
-/* Er zijn vier opdrachten te doen voor jou
- *
- * 1. Voeg bitcoinData.php toe aan het bestand index.php (de bestanden header.php footer.php, en de JS bestanden worden al toegevoegd)
- * 2. Maak een array met verschillende waardes. 
- *      Deze array noem je $buttons. Op de index pagina wordt van deze array gebruik gemaakt om knoppen met euro-prijzen te genereren.
- *      De array bevat 3 verschillende waardes: 2 integers en 1 float getal.
- *      Deze waardes mag je zelf kiezen, wees zo uniek mogelijk.
+/*
  * 3. De functie calculateBitcoinAmount() is niet afgemaakt. Deze functie rekent uit hoeveel bitcoins er worden gekocht als er op 1 van de knoppen geklikt wordt. 
  *     Zie regel 36 van dit bestand
  * 4. Voeg de drie benodigde waardes toe aan de $transactions array met array_push() zodat de nieuwe gekochte stukje bitcoin wordt toegevoegd 
@@ -15,14 +9,12 @@
 /*******************************************************************************************************************/
 /******************************************* OPDRACHT 2 doe je hieronder *******************************************/
 
-/* 
- * Opdracht 2: Zet hier de $buttons array neer 
- * 
- */
-$buttons=[];
-echo $buttons;
+/*  Opdracht 2: Zet hier de $buttons array neer  */
 
+$buttons=[8,20.5,300];
 
+// 
+// 
 /******************************************* OPDRACHT 2 doe je hierboven *******************************************/
 /*******************************************************************************************************************/
 
@@ -43,9 +35,16 @@ function calculateBitcoinAmount()
         $euro = (int)$_GET['euro']; //Dit blokje code (if-statement) kun je laten staan.
     }
 
-    //SCHRIJF JE CODE.
+    /************************************************************ Bijv. ***********************************************************************/
+    /* Als de huidigeprijs van 1 hele bitcoin 5000,- kost en jij betaalt 1000,- euro. Dan krijg je 1/5 oftewel 0,2 bitcoin. 
+     * Om dit te bereken moet je je koopbedrag delen door de huidigeprijs. Aantal gekochte bicoin = koopbedrag/huidigePrijs; = (1000/5000=0,2). 
+    */
 
+    $prijs = getBitcoinPrice();
+    $bedrag =  $euro; 
+    $aantalGekochteBicoin = $bedrag / $prijs; //This is the formule of the bitcoin that you get after you buy it for any amount of money. 
 
+    return [$prijs,$bedrag,$aantalGekochteBicoin]; // The final result that will returned after calculation.
 
 }
 /******************************************* OPDRACHT 3 doe je hierboven *******************************************/
@@ -77,6 +76,12 @@ $transactions = [
 if (isset($_GET['euro'])) {
 
     $euro = $_GET['euro']; //deze regel laten staan
+
+    array_push($transactions,calculateBitcoinAmount()); /* This will push the funtion (calculator) to vabrible ($transactions), to add a extra row to the array. 
+                if you push any amount of button on your screen to buy bitcoin, than wil the calculator calculate and wli returd amount of bitcoins that you buy. */
+    
+                //print_r($transactions);
+
 
     /* SCHRIJF HIER JE CODE.
      * Schrijf hieronder de code om de gekochte bitcoin aan de array $transactions toe te voegen.

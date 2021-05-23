@@ -34,7 +34,7 @@ _De syntax van een if else statement:_
 
 Je weet hoe je het eerste gedeelte van de code schrijven:
 
-```php
+```php-
 $variabele1 = 10;
 $variabele2 = 6;
 

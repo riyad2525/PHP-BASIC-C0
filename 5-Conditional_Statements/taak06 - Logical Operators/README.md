@@ -1,5 +1,6 @@
 # PHP-BASIC - Conditional Statements
 
+
 ## Taak 06 - Logical Operators
 
 ## Uitleg
@@ -11,7 +12,7 @@ Soms wil je meer dan één vergelijking maken, bijvoorbeeld als je wilt vergelij
 >_Met logical operators kun je vergelijkingen (conditional statements) combineren!_
 
 In PHP heb je verschillende soorten logical operators namelijk:
-
++
 >* `&&`: True als beide waardes waar zijn
 >* `||`: True als een of beide van de twee waardes waar zijn
 >* `xor`: True als een van de twee waardes waar is maar niet beide
